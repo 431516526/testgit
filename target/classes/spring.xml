@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <!--自动扫描-->
+    <!--spring自动扫描com.jxd包下的所有的资源，看看有没有注解，
+    如果有则把该对象作为bean注册进spring容器-->
+    <context:component-scan base-package="com.jxd"></context:component-scan>
+    <!--被spring管理的资源都成为bean
+    id，spring帮我们创建的对象的名字
+    class，spring帮我们管理的类的名字-->
+<!--    <bean id="helloWorld" class="com.jxd.HelloWorld">
+        &lt;!&ndash;为string类型的name注入值&ndash;&gt;
+        <property name="name" value="amdin"></property>
+    </bean>
+    <bean id="commandDao" class="com.jxd.dao.impl.CommandDaoImpl"></bean>
+    &lt;!&ndash;让spring帮我们管理CommandServiceImpl&ndash;&gt;
+    <bean id="commandService" scope="singleton" class="com.jxd.service.impl.CommandServiceImpl">
+        &lt;!&ndash;name是service实现类中的属性名，ref是已经装配好的bean的id即上面的commandDao的bean&ndash;&gt;
+        <property name="commandDao" ref="commandDao"></property>
+    </bean>-->
+
+</beans>
